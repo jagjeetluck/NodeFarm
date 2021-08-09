@@ -8,6 +8,7 @@ const tempCard = fs.readFileSync(`${__dirname}/templates/template-card.html`, 'u
 const tempProduct = fs.readFileSync(`${__dirname}/templates/template-product.html`, 'utf-8')
 const dataObj = JSON.parse(data);
 
+
 const replaceTemplate = (temp , product) => {
     let output = temp.replace(/{%PRODUCTNAME%}/g, product.productName);
     output = output.replace(/{%IMAGE%}/g, product.image);
